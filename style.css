@@ -2,22 +2,26 @@
     margin: 0;
     padding: 0;
 }
+
 * {
     box-sizing: border-box;
 }
+
 .window {
     width: 400px;
     height: 300px;
     margin: 150px auto;
     overflow: hidden;
 }
+
 .images {
-    display: flex;
+    /* display: flex; */
     position: relative;
 }
-.images > img {
+
+.images>img {
     /* 父亲多宽儿子就多宽 */
-    /* width: 100%; */
+    width: 100%;
     /* 解决display-inblock的bug, 不写图片有缝隙*/
     /* vertical-align: top; */
     transition: all .3s;
@@ -25,17 +29,17 @@
     top: 0;
 }
 
-.images > img.current {
+.images>img.current {
     left: 0;
     transform: translateX(0);
     z-index: 1;
 }
 
-.images > img.leave {
+.images>img.leave {
     transform: translateX(-100%);
     z-index: 1;
 }
 
-.images > img.enter {
+.images>img.enter {
     transform: translateX(100%);
 }
